@@ -1,0 +1,22 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "data": {
+    "values": [
+      {"responses": 10, "name": "Vanilla"},
+      {"responses": 20, "name": "Chocolate"},
+      {"responses": 25, "name": "Rocky Road"},
+      {"responses": 9, "name": "Oreo"}
+    ]
+  },
+  "params": [
+    {"name": "radius2value",
+    "bind": {"input": "range", "min": 0, "max": 100, "step": 1},
+    "value": 100}
+  ],
+  "mark": {"type": "arc", "radius2": {"expr": "radius2value"}
+  },
+  "encoding": {
+    "color": {"field": "name"},
+    "theta": {"field": "responses", "type": "quantitative"}
+  }
+}
