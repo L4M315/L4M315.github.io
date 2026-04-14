@@ -1,0 +1,211 @@
+---
+layout: default
+title: Homework 5 — UFO Sightings
+---
+
+<style>
+  .page-meta {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #999;
+    margin-bottom: 0.5rem;
+  }
+
+  .page-title {
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    line-height: 1.18;
+    margin-bottom: 1rem;
+  }
+
+  .page-desc {
+    font-size: 15px;
+    font-weight: 300;
+    color: #666;
+    max-width: 560px;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+  }
+
+  .btn-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid #000;
+  }
+
+  .btn {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 8px 16px;
+    text-decoration: none;
+    border: 1px solid #000;
+    color: #000;
+    transition: all 0.15s;
+  }
+
+  .btn:hover { background: #000; color: #fff; }
+  .btn-solid { background: #000; color: #fff; }
+  .btn-solid:hover { background: #333; }
+
+  .section { margin-bottom: 3rem; }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #e8e8e8;
+    margin-bottom: 1.25rem;
+  }
+
+  .section-num {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: #ccc;
+    letter-spacing: 0.1em;
+  }
+
+  .section h2 { font-size: 1.1rem; }
+
+  .badge {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    margin-left: auto;
+    border: 1px solid #e8e8e8;
+    color: #999;
+  }
+
+  .badge-interactive { border-color: #000; color: #000; }
+
+  .chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 1.25rem;
+  }
+
+  .chip {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    padding: 3px 9px;
+    border: 1px solid #e8e8e8;
+    color: #666;
+  }
+
+  .chip b { color: #000; font-weight: 500; margin-right: 3px; }
+
+  .body-text {
+    font-size: 14.5px;
+    line-height: 1.85;
+    color: #333;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+  }
+
+  .body-text code {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    background: #f5f5f5;
+    padding: 1px 5px;
+  }
+
+  .chart-wrap { border: 1px solid #e8e8e8; }
+
+  .chart-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #999;
+    padding: 8px 14px;
+    border-bottom: 1px solid #e8e8e8;
+    background: #fafafa;
+  }
+
+  .divider {
+    border: none;
+    border-top: 1px solid #e8e8e8;
+    margin: 3rem 0;
+  }
+</style>
+
+<p class="page-meta">Lamis Alghamdi &nbsp;·&nbsp; IS 445 &nbsp;·&nbsp; Homework 5</p>
+<h1 class="page-title">UFO Sightings<br>Across the US</h1>
+<p class="page-desc">
+  A brief description of your dataset and the story you are exploring.
+  What drew you to this data? What questions are you trying to answer?
+</p>
+
+<div class="btn-row">
+  <a href="YOUR_DATA_URL" class="btn btn-solid">The Data</a>
+  <a href="https://github.com/L4M315/L4M315.github.io/blob/main/homework_5/ufo_notebook.ipynb" class="btn">The Analysis</a>
+</div>
+
+<!-- ── PLOT 1 ── -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-num">01</span>
+    <h2>Your first plot title</h2>
+    <span class="badge">Static</span>
+  </div>
+
+  <div class="chips">
+    <span class="chip"><b>X</b> column_name · quantitative</span>
+    <span class="chip"><b>Y</b> column_name · quantitative</span>
+    <span class="chip"><b>Color</b> column_name · nominal</span>
+    <span class="chip"><b>Opacity</b> 0.3 · fixed</span>
+  </div>
+
+  <p class="body-text">
+    Describe what this visualization shows. What variables are on each axis?
+    Why did you choose this chart type? Explain your color encoding —
+    what variable drives the color, is it nominal or quantitative, and why does that
+    scheme make sense? Note any data transformations you performed in the notebook,
+    such as filtering rows, parsing <code>datetime</code> columns, or grouping categories.
+  </p>
+
+  <div class="chart-wrap">
+    <div class="chart-label">Figure 1 — brief description of what is shown</div>
+    <iframe src="ufo_map.html" width="100%" height="500px" frameborder="0" style="display:block"></iframe>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ── PLOT 2 ── -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-num">02</span>
+    <h2>Your second plot title</h2>
+    <span class="badge badge-interactive">Interactive</span>
+  </div>
+
+  <div class="chips">
+    <span class="chip"><b>X</b> column_name · quantitative</span>
+    <span class="chip"><b>Y</b> column_name · nominal</span>
+    <span class="chip"><b>Color</b> column_name · nominal</span>
+    <span class="chip"><b>Filter</b> column_name · dropdown</span>
+  </div>
+
+  <p class="body-text">
+    Describe what this visualization shows and how it complements the first plot.
+    Explain your encoding choices for each channel. If you reuse a color scheme
+    from Plot 1, note why that consistency helps the reader. Describe any data
+    transformations done in the notebook. Then discuss your interactivity — what
+    did you implement (dropdown, slider, brush selection, etc.), and how does it
+    help the viewer explore the data more clearly than a static version would?
+  </p>
+
+  <div class="chart-wrap">
+    <div class="chart-label">Figure 2 — brief description of what is shown</div>
+    <iframe src="ufo_interactive.html" width="100%" height="500px" frameborder="0" style="display:block"></iframe>
+  </div>
+</div>

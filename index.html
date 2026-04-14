@@ -1,0 +1,117 @@
+---
+layout: default
+title: Data Visualization
+---
+
+<style>
+  .page-meta {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #999;
+    margin-bottom: 0.5rem;
+  }
+
+  .page-title {
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    line-height: 1.18;
+    margin-bottom: 1rem;
+  }
+
+  .page-desc {
+    font-size: 15px;
+    font-weight: 300;
+    color: #666;
+    max-width: 560px;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+  }
+
+  .header-rule {
+    border: none;
+    border-top: 1px solid #000;
+    margin-bottom: 3rem;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #e8e8e8;
+  }
+
+  .section-num {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: #ccc;
+    letter-spacing: 0.1em;
+  }
+
+  .section-header h2 { font-size: 1.1rem; }
+
+  .links { list-style: none; }
+
+  .links li a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 0;
+    text-decoration: none;
+    color: #000;
+    font-size: 15px;
+    font-weight: 300;
+    border-bottom: 1px solid #e8e8e8;
+    transition: all 0.12s;
+  }
+
+  .links li a:hover { padding-left: 8px; }
+
+  .link-left { display: flex; align-items: center; gap: 16px; }
+
+  .link-meta {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: #ccc;
+  }
+
+  .links li a:hover .link-meta { color: #999; }
+
+  .arrow {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    color: #ccc;
+    margin-left: auto;
+    padding-left: 2rem;
+  }
+
+  .links li a:hover .arrow { color: #000; }
+</style>
+
+<p class="page-meta">Lamis Alghamdi &nbsp;·&nbsp; IS 445 &nbsp;·&nbsp; Spring 2026</p>
+<h1 class="page-title">Data Visualization</h1>
+<p class="page-desc">
+  Course portfolio for IS 445 at the University of Illinois Urbana-Champaign.
+  Each homework explores a different dataset using Python, Altair, and Vega-Lite.
+</p>
+
+<hr class="header-rule">
+
+<div class="section-header">
+  <span class="section-num">HW</span>
+  <h2>Homeworks</h2>
+</div>
+
+<ul class="links">
+  <li>
+    <a href="/homework_5/ufo.html">
+      <div class="link-left">
+        <span class="link-meta">05</span>
+        <span>UFO Sightings Across the US</span>
+      </div>
+      <span class="arrow">→</span>
+    </a>
+  </li>
+  <!-- add more homeworks here -->
+</ul>
