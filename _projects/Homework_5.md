@@ -93,7 +93,7 @@ Geographically, dots cluster along the coasts, with California at the lead.
 Population clearly drives reporting. The East Coast appears dense with dots, 
 but switching to States mode reveals lighter 
 shading, sightings are spread across many smaller states rather than concentrated in 
-a few large ones like California and Texas on the West Coast.
+a few large ones like California on the West Coast.
 
 #### Design Choices: Encodings
 
