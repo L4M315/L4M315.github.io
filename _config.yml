@@ -126,3 +126,6 @@ exclude:
   - "*.ipynb"
   - "python_notebooks/*"
   - vendor
+
+include:
+  - _homeworks
