@@ -33,13 +33,13 @@ The goal of this heatmap is to show how UFO sightings distribute across hours of
 Each cell represents the percentage of that month's sightings occurring at a given hour. 
 A bar chart above summarizes the overall hourly distribution.
 
-### Interpretation
+#### Interpretation
 
-The strongest pattern is the 21-22 peak, this aligns with when people 
-are most likely to be outdoors after dark. Summer months push this peak slightly later, 
+The strongest pattern is the 21-22 peak, it's dark enough to see things in the sky but 
+early enough that people are still outside or awake. Summer months push this peak slightly later, 
 while winter months peak earlier around hours 19–20. The single highest cell is July at 
 21 (21.2%), likely driven by July 4th celebrations when large numbers of people are 
-watching the sky. Meanwhile, early morning hours (6–9) are consistently the quietest 
+watching the sky. Meanwhile, early morning hours are consistently the quietest 
 at under 1.5%.
 
 #### Design Choices: Encodings
@@ -85,7 +85,7 @@ revealing precise clustering along coastlines and around cities, while "States"
 shows a choropleth answering which states have the most reports overall. 
 The interactivity lets a single visualization answer questions that would otherwise require multiple separate charts.
 
-### Interpretation
+#### Interpretation
 
 The most striking pattern is the explosion of sightings from the 1990s onward — 
 dragging the slider from the 1980s to the 2000s shows the map going from sparsely 
