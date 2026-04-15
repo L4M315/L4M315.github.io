@@ -1,5 +1,5 @@
 ---
-name: Homework 5
+name: IS 445 - HW5
 tools: [Python, HTML, vega-lite]
 image: assets/pngs/UFO.png
 description: This is the Jekyll page for my HW5 submission
@@ -10,7 +10,7 @@ custom_js:
   - justcharts
 ---
 
-## Overview
+## IS 445: HW5
 
 An exploration of 80,000+ UFO sighting reports spanning from the early 1900s to 2014.
 
@@ -32,6 +32,15 @@ I wanted to create something that looks like the
 The goal of this heatmap is to show how UFO sightings distribute across hours of the day for each month. 
 Each cell represents the percentage of that month's sightings occurring at a given hour. 
 A bar chart above summarizes the overall hourly distribution.
+
+### Interpretation
+
+The strongest pattern is the 21-22 peak, this aligns with when people 
+are most likely to be outdoors after dark. Summer months push this peak slightly later, 
+while winter months peak earlier around hours 19–20. The single highest cell is July at 
+21 (21.2%), likely driven by July 4th celebrations when large numbers of people are 
+watching the sky. Meanwhile, early morning hours (6–9) are consistently the quietest 
+at under 1.5%.
 
 #### Design Choices: Encodings
 
@@ -69,9 +78,42 @@ Drag the slider to show different decades.
 
 The interactive map shows the distribution of UFO sightings across the United States, 
 with cumulative data by decade. The slider shows how sightings 
-accumulated from the 1910s through the 2010s. A dropdown toggles between two views: 
-"Dots" shows individual sighting locations as points on a dark map, while "States" 
-shows a choropleth where each state is shaded by its total sighting count.
+accumulated from the 1910s through the 2010s, revealing how reporting went from a handful of scattered dots 
+to tens of thousands blanketing the country. A dropdown toggles between two views: 
+"Dots" shows individual sighting locations as points on a dark map, 
+revealing precise clustering along coastlines and around cities, while "States" 
+shows a choropleth answering which states have the most reports overall. 
+The interactivity lets a single visualization answer questions that would otherwise require multiple separate charts.
+
+### Interpretation
+
+The most striking pattern is the explosion of sightings from the 1990s onward — 
+dragging the slider from the 1980s to the 2000s shows the map going from sparsely 
+dotted to nearly blanketed. This coincides with the rise of the internet and online 
+reporting platforms, suggesting that easier reporting drove much of the increase 
+rather than more actual sightings.
+
+Geographically, sightings cluster heavily along the coasts — particularly the Pacific 
+coast from Seattle to San Diego and the Northeast corridor from Washington DC to Boston. 
+In Dots mode, major metro areas light up as dense clusters while rural regions like 
+Montana, Wyoming, and the Dakotas remain sparse. Switching to States mode confirms 
+this: California leads by a wide margin with over 9,000 sightings, followed by 
+Washington, Florida, and Texas.
+
+Population clearly drives reporting — the states with the most sightings are simply 
+the most populated. The interesting exceptions are Washington and Oregon, which 
+appear disproportionately high relative to their population, possibly reflecting 
+cultural factors or proximity to military installations in the Pacific Northwest.
+
+#### Interpretation
+
+Sightings explode from the 1990s onward, my interpretation is that the "ease" of reporting could be the 
+driver of this increase due to the rise of the internet and online reporting platforms.
+Geographically, dots cluster along the coasts, with California at the lead. 
+Population clearly drives reporting. The East Coast appears dense with dots, 
+but switching to States mode reveals lighter 
+shading, sightings are spread across many smaller states rather than concentrated in 
+a few large ones like California and Texas on the West Coast.
 
 #### Design Choices: Encodings
 
