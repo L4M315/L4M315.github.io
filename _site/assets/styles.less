@@ -1,0 +1,305 @@
+/* ============================================
+   Slide Theme – White & Minimal
+   Font: Atkinson Hyperlegible  |  Mono: JetBrains Mono
+   ============================================ */
+
+.reveal {
+    @basefont: 22px;
+    @accent: #2563eb;
+    @text: #1e1e1e;
+    @muted: #6b7280;
+    @border: #e5e7eb;
+    @code-bg: #f8f9fa;
+
+    font-size: @basefont;
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+    color: @text;
+    line-height: 1.6;
+    font-weight: 400;
+
+    /* ---- Global slide alignment ---- */
+    section.present {
+        text-align: left;
+    }
+
+    section ol,
+    section ul {
+        margin-left: 1em !important;
+        padding-left: 0 !important;
+    }
+
+    .controls {
+        display: none !important;
+    }
+
+    section ol ol,
+    section ul ul,
+    section ol ul,
+    section ul ol {
+        margin-left: 1.5em !important;
+    }
+
+    /* ---- Typography ---- */
+    h1, h2, h3, h4, h5 {
+        font-family: 'Atkinson Hyperlegible', sans-serif;
+        text-transform: none;
+        font-weight: 600;
+        letter-spacing: -0.02em;
+        color: @text;
+        line-height: 1.25;
+        margin-bottom: 0.6em;
+    }
+
+    h1 { font-size: 2.0em; }
+    h2 { font-size: 1.5em; }
+    h3 { font-size: 1.2em; }
+    h4 { font-size: 1.0em; color: @muted; font-weight: 500; }
+
+    p {
+        margin-bottom: 0.75em;
+    }
+
+    a {
+        color: @accent;
+        text-decoration: none;
+        border-bottom: 1px solid fade(@accent, 30%);
+        &:hover {
+            border-bottom-color: @accent;
+        }
+    }
+
+    strong {
+        font-weight: 600;
+    }
+
+    /* ---- Utility text sizes ---- */
+    p.mediumtext, .mediumtext  { font-size: @basefont - 4px; }
+    p.smalltext, .smalltext    { font-size: @basefont - 8px; color: @muted; }
+    p.tinytext, .tinytext      { font-size: @basefont - 12px; color: @muted; }
+
+    /* ---- Title slide ---- */
+    .titleslide {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        justify-content: center !important;
+        text-align: left !important;
+        height: 100%;
+
+        p {
+            margin-left: 0 !important;
+        }
+
+        h1 {
+            font-size: 2.6em;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            margin: 0 0 0.15em 0;
+            line-height: 1.15;
+        }
+
+        .subtitle {
+            font-size: 1.1em;
+            color: @muted;
+            font-weight: 400;
+            margin: 0 0 1.2em 0;
+        }
+
+        .title-divider {
+            width: 48px;
+            height: 3px;
+            background: @accent;
+            border-radius: 2px;
+            margin: 0 0 1.4em 0;
+        }
+
+        .title-meta {
+            p {
+                margin: 0;
+                line-height: 1.9;
+                font-size: 1em;
+                color: @text;
+            }
+            .instructor {
+                font-weight: 500;
+                color: @text;
+            }
+            .course {
+                color: @text;
+            }
+            .semester {
+                color: @text;
+                font-weight: 300;
+            }
+        }
+    }
+
+    /* ---- Images ---- */
+    section img {
+        box-shadow: none;
+        border: 0;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 4px;
+    }
+
+    /* ---- Lists ---- */
+    ul, ol {
+        margin-left: 0.5em;
+    }
+
+    li {
+        margin-bottom: 0.35em;
+        line-height: 1.55;
+    }
+
+    li::marker {
+        color: @muted;
+    }
+
+    ol li::marker {
+        color: @text;
+    }
+
+    /* ---- Code ---- */
+    code {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 15px;
+        background: @code-bg;
+        padding: 0.15em 0.4em;
+        border-radius: 3px;
+        color: #1a1a2e;
+    }
+
+    pre {
+        width: 100%;
+        box-shadow: none;
+        border: 1px solid @border;
+        border-radius: 6px;
+        background: @code-bg;
+
+        code {
+            padding: 1em 1.2em;
+            line-height: 1.5;
+            background: transparent;
+            max-height: 480px;
+        }
+    }
+
+    /* ---- Tables ---- */
+    table {
+        border-collapse: collapse;
+        width: auto;
+        font-size: 0.9em;
+
+        th {
+            text-align: left;
+            font-weight: 600;
+            padding: 0.5em 1em;
+            border-bottom: 2px solid @text;
+        }
+
+        td {
+            text-align: left;
+            padding: 0.45em 1em;
+            border-bottom: 1px solid @border;
+        }
+
+        tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .table-hl {
+            background: fade(@accent, 8%);
+        }
+    }
+
+    /* ---- Blockquotes ---- */
+    blockquote {
+        border-left: 3px solid @accent;
+        margin: 1em 0;
+        padding: 0.5em 0 0.5em 1.2em;
+        background: transparent;
+        font-style: normal;
+        color: @muted;
+        font-size: 0.95em;
+        box-shadow: none;
+
+        p {
+            margin: 0;
+        }
+    }
+
+    /* ---- Horizontal rules ---- */
+    hr {
+        border: none;
+        border-top: 1px solid @border;
+        margin: 1.5em 0;
+    }
+
+    /* ---- Fragment animations ---- */
+    .fragment.step-fade-in-then-out {
+        opacity: 0;
+        display: none;
+    }
+    .fragment.step-fade-in-then-out.current-fragment {
+        opacity: 1;
+        display: inline;
+    }
+
+    /* ---- Layout helpers ---- */
+    .left {
+        float: left;
+        width: 48%;
+        text-align: left;
+    }
+    .right {
+        float: right;
+        width: 48%;
+        text-align: left;
+    }
+
+    .multiCol {
+        display: table;
+        table-layout: fixed;
+        width: 100%;
+        text-align: left;
+
+        .col {
+            display: table-cell;
+            vertical-align: top;
+            width: 50%;
+            padding: 0 0 0 2.5%;
+            &:first-of-type { padding-left: 0; }
+        }
+    }
+
+    .fullHeight {
+        height: 100%;
+        width: 100%;
+        vertical-align: middle;
+        > canvas {
+            height: 100vh;
+            width: 100%;
+        }
+    }
+
+    bigtext {
+        font-size: 600%;
+        font-weight: 700;
+        letter-spacing: -0.04em;
+    }
+}
+
+/* ---- Helpers ---- */
+.centered {
+    text-align: center;
+}
+
+.left_abs {
+    left: 0;
+    text-align: left;
+    float: left;
+    width: 50%;
+}

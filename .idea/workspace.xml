@@ -7,13 +7,11 @@
     <list default="true" id="9be0ca79-625a-4bca-8b4f-90996b0f06de" name="Changes" comment="idk what I'm doing 2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/hw/hw5/heatmap.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/hw/hw5/heatmap.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/hw/hw5/map.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/hw/hw5/map.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/hw/hw5/ufo-scrubbed-geocoded-time-standardized-00.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/hw/hw5/us_map.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_layouts/slides.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layouts/slides.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/about/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/about/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/projects/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/projects/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/sitemap.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/about.md" beforeDir="false" afterPath="$PROJECT_DIR$/pages/about.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +103,7 @@
       <workItem from="1776207329405" duration="313000" />
       <workItem from="1776287504580" duration="412000" />
       <workItem from="1776287977429" duration="121000" />
-      <workItem from="1776288525299" duration="579000" />
+      <workItem from="1776288525299" duration="8143000" />
     </task>
     <task id="LOCAL-00001" summary="idk what I'm doing">
       <option name="closed" value="true" />

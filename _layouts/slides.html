@@ -1,45 +1,45 @@
 <!doctype html>
 <html>
   <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-<title>{{page.title}}</title>
+    <title>{{page.title}}</title>
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/white.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/white.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/markdown/markdown.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/highlight/highlight.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/notes/notes.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/math/math.js"></script>
 
-<!-- Theme used for syntax highlighting of code -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
-<link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+    {% if page.include_vega %}
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+    {% endif %}
 
-<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/markdown/markdown.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/highlight/highlight.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/notes/notes.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/math/math.js"></script>
-
-{% if page.include_vega %}
-<script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
-<script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
-<script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
-{% endif %}
-
-</style>
-
-  <link rel="stylesheet/less" type="text/css" href="{{ '/assets/styles.less' | relative_url }}" />
+    <link rel="stylesheet/less" type="text/css" href="{{ '/assets/styles.less' | relative_url }}" />
   </head>
 
   <body>
     <div class="reveal">
       <div class="slides">
-          <section class="titleslide">
-              <h1>{{page.title}}</h1>
-              <h2>{{site.data.class.instructors | map: "name" | join: ", " }}</h2>
-              <h2>{{site.data.class.course.name}} - {{site.data.class.course.semester}}</h2>
-          </section>
+        <section class="titleslide">
+          <h1>{{page.title}}</h1>
+          {% if page.subtitle %}<p class="subtitle">{{page.subtitle}}</p>{% endif %}
+          <div class="title-divider"></div>
+          <div class="title-meta">
+            {% if page.instructor %}<p class="instructor">{{page.instructor}}</p>{% endif %}
+            {% if page.course %}<p class="course">{{page.course}}</p>{% endif %}
+            {% if page.semester %}<p class="semester">{{page.semester}}</p>{% endif %}
+          </div>
+        </section>
         <section data-markdown
            data-separator="^\n---\n"
            data-separator-vertical="^\n----\n">
@@ -49,35 +49,30 @@
         </section>
       </div>
     </div>
-<script src="https://cdn.jsdelivr.net/npm/reveald3@2.0.2/dist/reveald3.js"></script>
-<script>
-    // More info about config & dependencies:
-    // - https://github.com/hakimel/reveal.js#configuration
-    // - https://github.com/hakimel/reveal.js#dependencies
-    Reveal.initialize({
+
+    <script src="https://cdn.jsdelivr.net/npm/reveald3@2.0.2/dist/reveald3.js"></script>
+    <script>
+      Reveal.initialize({
         fragments: true,
         fragmentInURL: true,
         hash: true,
-        width: 1024,
-        height: 768,
-        margin: 0.02,
-        plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath],// RevealD3],
-		keyboard: {
-		},
+        width: 1120,
+        height: 700,
+        margin: 0.04,
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealMath],
+        keyboard: {},
         center: false,
         transition: 'none',
         backgroundTransition: 'none',
+        slideNumber: false,
         reveald3: {
-            runLastState: false
+          runLastState: false
         }
-    });
-</script>
-<script src="https://cdn.jsdelivr.net/npm/less@4.2.0/dist/less.min.js" ></script>
-{% if page.setup_script %}
-<script src="{{ page.setup_script }}"></script>
-{% endif %}
-{% if page.include_twitter %}
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-{% endif %}
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/less@4.2.0/dist/less.min.js"></script>
+    {% if page.setup_script %}
+    <script src="{{ page.setup_script }}"></script>
+    {% endif %}
   </body>
 </html>
