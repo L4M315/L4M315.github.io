@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+
+<!--
+  portfolYOU Jekyll theme by Youssef Raafat
+  Free for personal and commercial use under the MIT license
+  https://github.com/YoussefRaafatNasry/portfolYOU
+  Updates for JPN Fall 2024
+  FALL2024ID49605
+-->
+
+<html lang="en" class="h-100">
+
+<head>
+
+  
+  
+  
+
+  
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Homework 5">
+  <meta property="og:description" content="This is the Jekyll page for my HW5 submission">
+  <meta property="og:image" content="assets/pngs/UFO.png">
+
+  <title>Homework 5</title>
+  <meta name="description" content="This is the Jekyll page for my HW5 submission">
+
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
+
+  <!-- Theme style -->
+  <script src="/assets/js/theme.js"></script>
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.0/css/all.css">
+
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+
+  <!-- Animate CSS CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body class="h-100 d-flex flex-column">
+
+  <main class="flex-shrink-0 container mt-5">
+    <nav class="navbar navbar-expand-lg navbar-themed">
+
+  <a class="navbar-brand" href="/"><h5><b>IS445 Jekyll Template</b></h5></a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fas fa-1x fa-bars text-themed"></i>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav ml-auto"><a class="nav-item nav-link active" href="/projects/">Projects</a>
+
+      <a class="nav-item nav-link " href="/about/">About</a>
+
+      
+
+      <span id="theme-toggler" class="nav-item nav-link" role="button" onclick="toggleTheme()"></span>
+    </div>
+  </div>
+
+</nav>
+    <div class="col-lg-10 mx-auto mt-5 markdown-body">
+  <h2 id="overview">Overview</h2>
+
+<p>An exploration of 80,000+ UFO sighting reports spanning from the early 1900s to 2014.</p>
+
+<p><a href="https://raw.githubusercontent.com/L4M315/L4M315.github.io/refs/heads/main/assets/hw/hw5/ufo-scrubbed-geocoded-time-standardized-00.csv" class="btn" style="display:inline-block; padding:8px 16px; background:#4c78a8; color:white; text-decoration:none; border-radius:4px; margin-right:8px;">Data</a>
+<a href="https://github.com/L4M315/L4M315.github.io/blob/main/assets/hw/hw5/ufo_analysis.ipynb" class="btn" style="display:inline-block; padding:8px 16px; background:#333; color:white; text-decoration:none; border-radius:4px;">Analysis</a></p>
+
+<hr />
+
+<h2 id="first-plot-static">First plot, static</h2>
+
+<p>I wanted to create something that looks like the 
+<a href="https://www.flerlagetwins.com/2017/02/ufo-sightings-of-2016-recreation-of_99.html">Sighting Time, Seasonally plot from this inforgraph</a>.</p>
+
+<vegachart schema-url="/assets/hw/hw5/heatmap.json" style="width: 100%"></vegachart>
+
+<h4 id="description">Description</h4>
+
+<p>The goal of this heatmap is to show how UFO sightings distribute across hours of the day for each month. 
+Each cell represents the percentage of that month’s sightings occurring at a given hour. 
+A bar chart above summarizes the overall hourly distribution.</p>
+
+<h4 id="design-choices-encodings">Design Choices: Encodings</h4>
+
+<p>The x-axis encodes the hours of day (0–23), and the y-axis encodes the months.
+The bar chart on top uses bar height to encode the total sighting count per hour, 
+giving an aggregate view alongside the detailed heatmap.</p>
+
+<h4 id="design-choices-colormaps">Design Choices: Colormaps</h4>
+
+<p>Originally, I wanted this whole page to be in green, because green is linked in my head with aliens. 
+Green is not a colorblind-friendly color, so I decided to switch it for blue. 
+I also added the percentages inside the cells and had them switch their color between black/white 
+based on the color of the cell to improve readability.</p>
+
+<h4 id="transformations">Transformations</h4>
+
+<p>I extracted the hour and month from each datetime, then grouped by month and hour to count reports.
+I then normalized each month’s counts into percentages (each row sums to 100%), 
+which allows for fair comparison across months regardless of how many total sightings each month has.
+Without this normalization, summer months would dominate simply due to higher volume, 
+hiding the time-of-day pattern.</p>
+
+<hr />
+
+<h2 id="second-plot-interactive">Second plot, interactive</h2>
+
+<p><strong>Interactivity</strong>: Toggle between the Dot (each sighting as a dot) or the State view. 
+Drag the slider to show different decades.</p>
+
+<vegachart schema-url="/assets/hw/hw5/us_map.json" style="width: 100%"></vegachart>
+
+<h4 id="description-1">Description</h4>
+
+<p>The interactive map shows the distribution of UFO sightings across the United States, 
+with cumulative data by decade. The slider shows how sightings 
+accumulated from the 1910s through the 2010s. A dropdown toggles between two views: 
+“Dots” shows individual sighting locations as points on a dark map, while “States” 
+shows a choropleth where each state is shaded by its total sighting count.</p>
+
+<h4 id="design-choices-encodings-1">Design Choices: Encodings</h4>
+
+<p><strong>In Dots mode,</strong> each circle’s position encodes latitude and longitude, 
+circle size encodes the number of sightings at that location 
+(using a square root scale to prevent large values from dominating), 
+and the neon green color was chosen for high contrast against the black map.</p>
+
+<p><strong>In States mode,</strong> the fill color of each state encodes its cumulative sighting count 
+using a sequential blue scale with a square root transform.</p>
+
+<p>Both modes use tooltips to show exact counts on hover.</p>
+
+<h4 id="design-choices-colormaps-1">Design Choices: Colormaps</h4>
+
+<p>For the Dots mode, I wanted it to look like the space pictures they take of Earth at night. 
+I chose neon green here because green is linked to aliens in my head. For the States mode, I initially went with green here too, but switched it to blue to become 
+colorblind-friendly. This color map uses a square root scale to compress the range and 
+reveal differences among lower-count states.</p>
+
+<h4 id="transformations-1">Transformations</h4>
+
+<p>I enriched the original dataset using the <code class="language-plaintext highlighter-rouge">reverse_geocoder</code> library to fill in 
+missing country codes from latitude/longitude coordinates, then filtered to US-only sightings.
+I rounded coordinates to one decimal place and aggregated sighting counts, 
+reducing 70,000+ individual records to a manageable set of location points. 
+I then aggregated sighting counts per state per cumulative 
+decade so each state’s shading reflects all sightings up to the selected decade.</p>
+
+</div>
+  </main>
+  <footer class="mt-auto py-3 text-center">
+
+  <small class="text-muted mb-2">
+    <i class="fas fa-code"></i> with <i class="fas fa-heart"></i>
+    by <strong>A. P. Corgi</strong>
+  </small>
+
+  <div class="container-fluid justify-content-center"><a class="social mx-1"  href="mailto:username@domain.com"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#db4437'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fas fa-envelope fa-1x"></i>
+    </a><a class="social mx-1"  href="https://www.github.com/jnaiman"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#333333'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-github fa-1x"></i>
+    </a><a class="social mx-1"  href="https://www.twitter.com/your_username"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#1da1f2'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-twitter fa-1x"></i>
+    </a><a class="social mx-1"  href="https://www.youtube.com/your_channel_name"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#ff0000'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-youtube fa-1x"></i>
+    </a>
+
+</div>
+
+  Theme by <a href="https://github.com/YoussefRaafatNasry/portfolYOU">portfolYOU</a> and <a href="https://github.com/4dcu-be/4dcu.be">4dcu.be</a>.
+
+  
+<!--<small id="attribution">
+    theme <a href="https://github.com/YoussefRaafatNasry/portfolYOU">portfolYOU</a>
+  </small>
+-->
+
+</footer>
+
+
+<!-- Custom page specific js files -->
+  
+    <script src='/assets/js/vega.min.js' type="text/javascript"></script>
+  
+    <script src='/assets/js/vega-lite.min.js' type="text/javascript"></script>
+  
+    <script src='/assets/js/vega-embed.min.js' type="text/javascript"></script>
+  
+    <script src='/assets/js/justcharts.js' type="text/javascript"></script>
+  
+
+
+
+  
+  <!-- GitHub Buttons -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<!-- jQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper.js CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+<!-- Bootstrap JS CDN -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!-- wow.js CDN & Activation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+<script> new WOW().init(); </script>
+
+<!-- Initialize all tooltips -->
+<script>
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+</body>
+
+<!--
+end of checks! JPN
+-->
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

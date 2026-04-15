@@ -6,6 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="9be0ca79-625a-4bca-8b4f-90996b0f06de" name="Changes" comment="idk what I'm doing 2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_projects/1_Vega_lite_project.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_projects/2_Homework_5.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/_site/Gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/projects/1-vega-lite-project.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/projects/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/projects/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/sitemap.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/hw/hw5/heatmap.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/hw/hw5/heatmap.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/hw/hw5/map.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/hw/hw5/map.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/hw/hw5/ufo_analysis.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/assets/hw/hw5/ufo_analysis.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
