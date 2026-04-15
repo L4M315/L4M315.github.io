@@ -5,7 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9be0ca79-625a-4bca-8b4f-90996b0f06de" name="Changes" comment="idk what I'm doing 2">
-      <change beforePath="$PROJECT_DIR$/_projects/Homework_5.md" beforeDir="false" afterPath="$PROJECT_DIR$/_projects/Homework_5.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_projects/Homework_5.md" beforeDir="false" afterPath="$PROJECT_DIR$/_projects/is445_hw5.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/404.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/about/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/about/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/assets/pngs/cars.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/blog/hello-blog-world.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/blog/hello-blog-world.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/blog/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/blog/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/blog/tags.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/blog/tags.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/projects/homework-5.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/projects/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/projects/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/sitemap.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/hw/hw5/heatmap.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/hw/hw5/heatmap.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/hw/hw5/map.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/hw/hw5/map.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/hw/hw5/ufo-scrubbed-geocoded-time-standardized-00.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/hw/hw5/ufo_analysis.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/hw/hw5/us_map.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/pngs/cars.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/about.md" beforeDir="false" afterPath="$PROJECT_DIR$/pages/about.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,11 +72,12 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/lsg97/OneDrive/Desktop/UIUC/IS445/L4M315.github.io/assets/hw/hw5",
+    "last_opened_file_path": "C:/Users/lsg97/OneDrive/Desktop/UIUC/IS445/L4M315.github.io/_homeworks/is445_hw5",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -67,11 +89,13 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\lsg97\OneDrive\Desktop\UIUC\IS445\L4M315.github.io\_homeworks\is445_hw5" />
       <recent name="C:\Users\lsg97\OneDrive\Desktop\UIUC\IS445\L4M315.github.io\assets\hw\hw5" />
       <recent name="C:\Users\lsg97\OneDrive\Desktop\UIUC\IS445\L4M315.github.io\_homeworks" />
       <recent name="C:\Users\lsg97\OneDrive\Desktop\UIUC\IS445\L4M315.github.io\homework_5" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\lsg97\OneDrive\Desktop\UIUC\IS445\L4M315.github.io\_homeworks" />
       <recent name="C:\Users\lsg97\OneDrive\Desktop\UIUC\IS445\L4M315.github.io\homework_5" />
     </key>
   </component>
@@ -92,6 +116,8 @@
       <workItem from="1776133122470" duration="21939000" />
       <workItem from="1776203071583" duration="465000" />
       <workItem from="1776207329405" duration="313000" />
+      <workItem from="1776287504580" duration="412000" />
+      <workItem from="1776287977429" duration="121000" />
     </task>
     <task id="LOCAL-00001" summary="idk what I'm doing">
       <option name="closed" value="true" />

@@ -23,11 +23,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Homework 5">
+  <meta property="og:title" content="IS 445 - HW5">
   <meta property="og:description" content="This is the Jekyll page for my HW5 submission">
   <meta property="og:image" content="assets/pngs/UFO.png">
 
-  <title>Homework 5</title>
+  <title>IS 445 - HW5</title>
   <meta name="description" content="This is the Jekyll page for my HW5 submission">
 
   <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
@@ -54,7 +54,7 @@
   <main class="flex-shrink-0 container mt-5">
     <nav class="navbar navbar-expand-lg navbar-themed">
 
-  <a class="navbar-brand" href="/"><h5><b>IS445 Jekyll Template</b></h5></a>
+  <a class="navbar-brand" href="/"><h5><b>Lamis Alghamdi</b></h5></a>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <i class="fas fa-1x fa-bars text-themed"></i>
@@ -73,12 +73,12 @@
 
 </nav>
     <div class="col-lg-10 mx-auto mt-5 markdown-body">
-  <h2 id="overview">Overview</h2>
+  <h2 id="is-445-hw5">IS 445: HW5</h2>
 
 <p>An exploration of 80,000+ UFO sighting reports spanning from the early 1900s to 2014.</p>
 
-<p><a href="https://raw.githubusercontent.com/L4M315/L4M315.github.io/refs/heads/main/assets/hw/hw5/ufo-scrubbed-geocoded-time-standardized-00.csv" class="btn" style="display:inline-block; padding:8px 16px; background:#4c78a8; color:white; text-decoration:none; border-radius:4px; margin-right:8px;">Data</a>
-<a href="https://github.com/L4M315/L4M315.github.io/blob/main/assets/hw/hw5/ufo_analysis.ipynb" class="btn" style="display:inline-block; padding:8px 16px; background:#333; color:white; text-decoration:none; border-radius:4px;">Analysis</a></p>
+<p><a href="https://raw.githubusercontent.com/L4M315/L4M315.github.io/refs/heads/main/_homeworks/is445_hw5/ufo-scrubbed-geocoded-time-standardized-00.csv" class="btn" style="display:inline-block; padding:8px 16px; background:#4c78a8; color:white; text-decoration:none; border-radius:4px; margin-right:8px;">Data</a>
+<a href="https://github.com/L4M315/L4M315.github.io/blob/main/_homeworks/is445_hw5/ufo_analysis.ipynb" class="btn" style="display:inline-block; padding:8px 16px; background:#333; color:white; text-decoration:none; border-radius:4px;">Analysis</a></p>
 
 <hr />
 
@@ -87,13 +87,22 @@
 <p>I wanted to create something that looks like the 
 <a href="https://www.flerlagetwins.com/2017/02/ufo-sightings-of-2016-recreation-of_99.html">Sighting Time, Seasonally plot from this inforgraph</a>.</p>
 
-<vegachart schema-url="/assets/hw/hw5/heatmap.json" style="width: 100%"></vegachart>
+<vegachart schema-url="/_homeworks/is445_hw5/heatmap.json" style="width: 100%"></vegachart>
 
 <h4 id="description">Description</h4>
 
 <p>The goal of this heatmap is to show how UFO sightings distribute across hours of the day for each month. 
 Each cell represents the percentage of that month’s sightings occurring at a given hour. 
 A bar chart above summarizes the overall hourly distribution.</p>
+
+<h4 id="interpretation">Interpretation</h4>
+
+<p>The strongest pattern is the 21-22 peak, it’s dark enough to see things in the sky but 
+early enough that people are still outside or awake. Summer months push this peak slightly later, 
+while winter months peak earlier around hours 19–20. The single highest cell is July at 
+21 (21.2%), likely driven by July 4th celebrations when large numbers of people are 
+watching the sky. Meanwhile, early morning hours are consistently the quietest 
+at under 1.5%.</p>
 
 <h4 id="design-choices-encodings">Design Choices: Encodings</h4>
 
@@ -123,15 +132,28 @@ hiding the time-of-day pattern.</p>
 <p><strong>Interactivity</strong>: Toggle between the Dot (each sighting as a dot) or the State view. 
 Drag the slider to show different decades.</p>
 
-<vegachart schema-url="/assets/hw/hw5/us_map.json" style="width: 100%"></vegachart>
+<vegachart schema-url="/_homeworks/is445_hw5/us_map.json" style="width: 100%"></vegachart>
 
 <h4 id="description-1">Description</h4>
 
 <p>The interactive map shows the distribution of UFO sightings across the United States, 
 with cumulative data by decade. The slider shows how sightings 
-accumulated from the 1910s through the 2010s. A dropdown toggles between two views: 
-“Dots” shows individual sighting locations as points on a dark map, while “States” 
-shows a choropleth where each state is shaded by its total sighting count.</p>
+accumulated from the 1910s through the 2010s, revealing how reporting went from a handful of scattered dots 
+to tens of thousands blanketing the country. A dropdown toggles between two views: 
+“Dots” shows individual sighting locations as points on a dark map, 
+revealing precise clustering along coastlines and around cities, while “States” 
+shows a choropleth answering which states have the most reports overall. 
+The interactivity lets a single visualization answer questions that would otherwise require multiple separate charts.</p>
+
+<h4 id="interpretation-1">Interpretation</h4>
+
+<p>Sightings explode from the 1990s onward, my interpretation is that the “ease” of reporting could be the 
+driver of this increase due to the rise of the internet and online reporting platforms.
+Geographically, dots cluster along the coasts, with California at the lead. 
+Population clearly drives reporting. The East Coast appears dense with dots, 
+but switching to States mode reveals lighter 
+shading, sightings are spread across many smaller states rather than concentrated in 
+a few large ones like California on the West Coast.</p>
 
 <h4 id="design-choices-encodings-1">Design Choices: Encodings</h4>
 
@@ -167,29 +189,14 @@ decade so each state’s shading reflects all sightings up to the selected decad
 
   <small class="text-muted mb-2">
     <i class="fas fa-code"></i> with <i class="fas fa-heart"></i>
-    by <strong>A. P. Corgi</strong>
+    by <strong>L4M3i5</strong>
   </small>
 
-  <div class="container-fluid justify-content-center"><a class="social mx-1"  href="mailto:username@domain.com"
-       style="color: #6c757d"
-       onMouseOver="this.style.color='#db4437'"
-       onMouseOut="this.style.color='#6c757d'">
-      <i class="fas fa-envelope fa-1x"></i>
-    </a><a class="social mx-1"  href="https://www.github.com/jnaiman"
+  <div class="container-fluid justify-content-center"><a class="social mx-1"  href="https://www.github.com/L4M315"
        style="color: #6c757d"
        onMouseOver="this.style.color='#333333'"
        onMouseOut="this.style.color='#6c757d'">
       <i class="fab fa-github fa-1x"></i>
-    </a><a class="social mx-1"  href="https://www.twitter.com/your_username"
-       style="color: #6c757d"
-       onMouseOver="this.style.color='#1da1f2'"
-       onMouseOut="this.style.color='#6c757d'">
-      <i class="fab fa-twitter fa-1x"></i>
-    </a><a class="social mx-1"  href="https://www.youtube.com/your_channel_name"
-       style="color: #6c757d"
-       onMouseOver="this.style.color='#ff0000'"
-       onMouseOut="this.style.color='#6c757d'">
-      <i class="fab fa-youtube fa-1x"></i>
     </a>
 
 </div>
