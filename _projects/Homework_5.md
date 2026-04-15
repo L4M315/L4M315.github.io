@@ -87,26 +87,6 @@ The interactivity lets a single visualization answer questions that would otherw
 
 #### Interpretation
 
-The most striking pattern is the explosion of sightings from the 1990s onward — 
-dragging the slider from the 1980s to the 2000s shows the map going from sparsely 
-dotted to nearly blanketed. This coincides with the rise of the internet and online 
-reporting platforms, suggesting that easier reporting drove much of the increase 
-rather than more actual sightings.
-
-Geographically, sightings cluster heavily along the coasts — particularly the Pacific 
-coast from Seattle to San Diego and the Northeast corridor from Washington DC to Boston. 
-In Dots mode, major metro areas light up as dense clusters while rural regions like 
-Montana, Wyoming, and the Dakotas remain sparse. Switching to States mode confirms 
-this: California leads by a wide margin with over 9,000 sightings, followed by 
-Washington, Florida, and Texas.
-
-Population clearly drives reporting — the states with the most sightings are simply 
-the most populated. The interesting exceptions are Washington and Oregon, which 
-appear disproportionately high relative to their population, possibly reflecting 
-cultural factors or proximity to military installations in the Pacific Northwest.
-
-#### Interpretation
-
 Sightings explode from the 1990s onward, my interpretation is that the "ease" of reporting could be the 
 driver of this increase due to the rise of the internet and online reporting platforms.
 Geographically, dots cluster along the coasts, with California at the lead. 
